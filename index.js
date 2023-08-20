@@ -2,13 +2,16 @@ let n=10;
 
 let bars=[];
 
-   
+  creatBars();
+
+  let audio=new Audio("./music/start.mp3");
+    
 
 
 document.querySelector("#start").addEventListener("click" , bubbleSort);
 var slider=document.querySelector("#numbesrOfBars");
 var speedSlider =document.querySelector("#speed");
-let spd=100;
+let spd=400;
 
 const sleep =(time)=>{
     return new Promise(resolve => setTimeout(resolve, time))
@@ -25,6 +28,7 @@ speedSlider.oninput=function()
     document.querySelector(".speed-display").innerHTML= speedSlider.value;
 
     spd=speedSlider.value;
+    spd=420-spd;
    
    
 }
@@ -37,6 +41,12 @@ function creatBars()
            height:(parseInt(Math.random()*100)),
            color:"black"
         };
+
+        if(bars[i].height<5)
+        {
+            bars[i].height=5;
+            
+        }
         
     }
    
@@ -63,11 +73,12 @@ function printBars()
 
  async function bubbleSort()
 {
-    console.log(n);
+    audio.play(); 
+    let processDone=false;
     let counter=0;
     for(let i=0;i<n;i++)
     {    
-        console.log("EHallo");
+        
             for(let j=1;j<n-counter;j++)
             {
                 await sleep(spd);
@@ -96,12 +107,20 @@ function printBars()
             }
 
             bars[n-1-counter].color="green";
-            counter++;   
+            counter++;
+            processDone=true;  
     }
 
     bars[0].color="green";
     bars[1].color="green";
+    
     printBars();
+    if(processDone && counter==n)
+    {
+        audio=new Audio("./music/done.mp3");
+        audio.play(); 
+        
+    }
 
     
 }

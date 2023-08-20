@@ -1,12 +1,14 @@
 body
 {
-    overflow: hidden;
+    overflow-x: hidden;
 }
 .title , .buttons , .slider , .Speedslider
 {
     text-align: center;
     height: 10vh;
+    margin: 10PX;
 }
+
 #container 
 {
     padding: 10px;
@@ -44,8 +46,20 @@ body
     width: 50%;
 }
 
-
-
+.card-header
+{
+  text-align: center;
+}
+.card
+{
+  margin-bottom: 20px;
+}
+.footer
+{
+  padding: 20px;
+  text-align: center;
+  background-color: antiquewhite;
+}
 .btn {
     margin:0px 20px;
   align-items: center;

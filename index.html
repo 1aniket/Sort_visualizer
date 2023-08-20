@@ -10,14 +10,15 @@
 </head>
 <body>
     <div class="title">
-        <h1>Sort Visualizer</h1>
+        <h1 class="display-4">Sort Visualizer</h1>
+        
     </div>
    
     <div class="slider">
         <label for="numbesrOfBars">How Many Bars You Want ?</label>
         <input type="range" name="" id="numbesrOfBars" min="10" max="100" value="10">
         <h3 class="display">
-            0
+            10
         </h3>
     </div>
   
@@ -25,15 +26,86 @@
         <label for="speed">Speed ?</label>
         <input type="range" name="" id="speed" min="20" max="400" value="20" step="20">
         <h3 class="speed-display">
-            0
+            20
         </h3>
     </div>
+    
+
     <div class="buttons">
         <button type="button" id="start" class="btn">
             Start
         </button>
     </div>
     <div id="container">
+        
+    </div>
+    <div class="container description">
+        <div class="card">
+            <div class="card-header">
+                <h1 class="display-4">
+                    Bubble Sort
+                </h1>
+            </div>
+            <div class="card-body">
+                <h3 class="display-6">
+                    Description
+                </h3>
+                <p>
+                    Bubble sort is a sorting algorithm .The working procedure of bubble sort is simplest. Bubble sort works on the repeatedly swapping of adjacent elements until they are not in the intended order. It is called bubble sort because the movement of array elements is just like the movement of air bubbles in the water. Bubbles in water rise up to the surface; similarly, the array elements in bubble sort move to the end in each iteration.
+                </p>
+                <h3 class="display-6">
+                    Time Complexity
+                </h3>
+                <p>
+                    <ul>
+                        <li>
+                            <b>Best Case Complexity</b> - It occurs when there is no sorting required, i.e. the array is already sorted. The best-case time complexity of bubble sort is O(n).
+                        </li>
+                        <li>
+                            <b>Average Case Complexity</b> - It occurs when the array elements are in jumbled order that is not properly ascending and not properly descending. The average case time complexity of bubble sort is O(n2).
+                        </li>
+                        <li>
+                            <b> Worst Case Complexity</b> - It occurs when the array elements are required to be sorted in reverse order. That means suppose you have to sort the array elements in ascending order, but its elements are in descending order. The worst-case time complexity of bubble sort is O(n2). 
+                        </li>
+                    </ul>
+
+                </p>
+                <h3 class="display-6">
+                    Advantages
+                </h3>
+                <p>
+                    <ul>
+                        <li>
+                            Easy to understand.
+                        </li>
+                        <li>
+                            Easy to implement.
+                        </li>
+                        <li>
+                            In-place, no external memory is needed.
+                        </li>
+                        <li>
+                            Performs greatly when the array is almost sorted.
+                        </li>
+                    </ul>
+                </p>
+                <h3 class="display-6">
+                    Disadvantages
+                </h3>
+                <p>
+                    <ul>
+                        <li>
+                            Very expensive, O(n2) in worst case and average case.
+                        </li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid footer">
+        
+            Created by Aniket Bhogawar
         
     </div>
 
